@@ -160,15 +160,13 @@ class YearPickerState extends State<YearPicker> {
 
   bool get canGoUp => _currentPage < (_pageCount - 1);
 
-  int get _pageCount =>
-      ((widget.lastDate.year - widget.firstDate.year + 1) / 12).ceil();
+  int get _pageCount => ((widget.lastDate.year - widget.firstDate.year + 1) / 12).ceil();
 
   // --------------------------------- METHODS ---------------------------------
   @override
   void initState() {
     super.initState();
-    _currentPage =
-        ((widget.initialDate.year - widget.firstDate.year) / 12).floor();
+    _currentPage = ((widget.initialDate.year - widget.firstDate.year) / 12).floor();
     _pageController = PageController(initialPage: _currentPage);
   }
 
@@ -266,8 +264,7 @@ class _MonthButton extends StatelessWidget {
     final isEnabled = selectableMonthYearPredicate == null
         ? firstDate.compareTo(date) <= 0 && lastDate.compareTo(date) >= 0
         : selectableMonthYearPredicate!(date);
-    final isSelected =
-        date.month == selectedDate.month && date.year == selectedDate.year;
+    final isSelected = date.month == selectedDate.month && date.year == selectedDate.year;
 
     final now = DateTime.now();
     final isThisMonth = date.month == now.month && date.year == now.year;
@@ -361,11 +358,12 @@ class _Button extends StatelessWidget {
     return TextButton(
       onPressed: isEnabled ? onPressed : null,
       style: TextButton.styleFrom(
+        // maximumSize: Size(50, 50),
         backgroundColor: buttonBackground,
         primary: buttonText,
         onSurface: buttonText,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(100.0),
+          borderRadius: BorderRadius.circular(50.0),
         ),
         textStyle: TextStyle(color: buttonText),
       ),
