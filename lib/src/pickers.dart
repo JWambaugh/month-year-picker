@@ -360,8 +360,8 @@ class _Button extends StatelessWidget {
       style: TextButton.styleFrom(
         // maximumSize: Size(50, 50),
         backgroundColor: buttonBackground,
-        primary: buttonText,
-        onSurface: buttonText,
+        foregroundColor: buttonText,
+        disabledForegroundColor: buttonText,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50.0),
         ),

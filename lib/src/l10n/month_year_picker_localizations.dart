@@ -10,19 +10,23 @@ import 'month_year_picker_localizations_de.dart';
 import 'month_year_picker_localizations_en.dart';
 import 'month_year_picker_localizations_fr.dart';
 import 'month_year_picker_localizations_id.dart';
+import 'month_year_picker_localizations_ja.dart';
+import 'month_year_picker_localizations_ko.dart';
 import 'month_year_picker_localizations_ms.dart';
 import 'month_year_picker_localizations_pt.dart';
+import 'month_year_picker_localizations_th.dart';
+import 'month_year_picker_localizations_tr.dart';
 import 'month_year_picker_localizations_vi.dart';
 import 'month_year_picker_localizations_zh.dart';
 
-/// Callers can lookup localized strings with an instance of MonthYearPickerLocalizations returned
-/// by `MonthYearPickerLocalizations.of(context)`.
+/// Callers can lookup localized strings with an instance of MonthYearPickerLocalizations
+/// returned by `MonthYearPickerLocalizations.of(context)`.
 ///
 /// Applications need to include `MonthYearPickerLocalizations.delegate()` in their app's
-/// localizationDelegates list, and the locales they support in the app's
-/// supportedLocales list. For example:
+/// `localizationDelegates` list, and the locales they support in the app's
+/// `supportedLocales` list. For example:
 ///
-/// ```
+/// ```dart
 /// import 'l10n/month_year_picker_localizations.dart';
 ///
 /// return MaterialApp(
@@ -37,14 +41,14 @@ import 'month_year_picker_localizations_zh.dart';
 /// Please make sure to update your pubspec.yaml to include the following
 /// packages:
 ///
-/// ```
+/// ```yaml
 /// dependencies:
 ///   # Internationalization support.
 ///   flutter_localizations:
 ///     sdk: flutter
 ///   intl: any # Use the pinned version from flutter_localizations
 ///
-///   # rest of dependencies
+///   # Rest of dependencies
 /// ```
 ///
 /// ## iOS Applications
@@ -105,8 +109,12 @@ abstract class MonthYearPickerLocalizations {
     Locale('en'),
     Locale('fr'),
     Locale('id'),
+    Locale('ja'),
+    Locale('ko'),
     Locale('ms'),
     Locale('pt'),
+    Locale('th'),
+    Locale('tr'),
     Locale('vi'),
     Locale('zh'),
     Locale('zh', 'CH')
@@ -148,8 +156,12 @@ class _MonthYearPickerLocalizationsDelegate
         'en',
         'fr',
         'id',
+        'ja',
+        'ko',
         'ms',
         'pt',
+        'th',
+        'tr',
         'vi',
         'zh'
       ].contains(locale.languageCode);
@@ -183,10 +195,18 @@ MonthYearPickerLocalizations lookupMonthYearPickerLocalizations(Locale locale) {
       return MonthYearPickerLocalizationsFr();
     case 'id':
       return MonthYearPickerLocalizationsId();
+    case 'ja':
+      return MonthYearPickerLocalizationsJa();
+    case 'ko':
+      return MonthYearPickerLocalizationsKo();
     case 'ms':
       return MonthYearPickerLocalizationsMs();
     case 'pt':
       return MonthYearPickerLocalizationsPt();
+    case 'th':
+      return MonthYearPickerLocalizationsTh();
+    case 'tr':
+      return MonthYearPickerLocalizationsTr();
     case 'vi':
       return MonthYearPickerLocalizationsVi();
     case 'zh':
